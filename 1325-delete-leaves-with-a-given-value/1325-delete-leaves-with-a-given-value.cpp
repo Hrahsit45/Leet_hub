@@ -17,8 +17,7 @@ public:
             return NULL;
         
        if(root->left == NULL && root->right == NULL && target == root->val){
-           root = NULL;
-           return root;
+          return NULL;
        }
       
         root->left = removeLeafNodes(root->left , target);
@@ -26,7 +25,7 @@ public:
         
         
        if(!root->left && !root->right && target == root->val)
-           root = NULL;
+          return NULL;
       
         return root;
         
