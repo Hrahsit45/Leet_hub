@@ -4,23 +4,21 @@ public:
        
         int i = 0;
         int n = gas.size();
-       
+        int remain ;
+        int index ;
         int count = 0;
         while(count < n)
         {
             if(gas[i] - cost[i] >= 0)
             {
-                int remain  = gas[i] - cost[i];
-                
-                int index = i;
-                
-                i = (i+1)%n;
-                count++;
+                 remain  = gas[i] - cost[i];
+                 index = i;  
+                 i = (i+1)%n;
+                 count++;
                 
                 while(remain >= 0 && i != index)
-                {      
+                { 
                     remain += gas[i] - cost[i];    
-                    
                     i = (i+1)%n;
                     count++;
                 }
