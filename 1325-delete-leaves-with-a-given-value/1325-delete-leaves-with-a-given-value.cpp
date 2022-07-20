@@ -16,13 +16,10 @@ public:
         if(root == NULL)
             return NULL;
         
-       if(root->left == NULL && root->right == NULL && target == root->val){
-          return NULL;
-       }
       
-        if(root->left)
+   
         root->left = removeLeafNodes(root->left , target);
-        if(root->right)
+    
         root->right = removeLeafNodes(root->right , target);
         
         
