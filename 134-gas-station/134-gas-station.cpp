@@ -14,15 +14,13 @@ public:
                  remain  = gas[i] - cost[i];
                  index = i;  
                  i = (i+1)%n;
-                 count++;
-                
+                 count++;   
                 while(remain >= 0 && i != index)
                 { 
                     remain += gas[i] - cost[i];    
                     i = (i+1)%n;
                     count++;
                 }
-                
                 if(i == index && remain >= 0) 
                     return i;     
             }
