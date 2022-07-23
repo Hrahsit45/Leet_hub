@@ -7,10 +7,10 @@ public:
         for(int i = 0 ; i<s.size() ; i++)
         {
             m[s[i]]++;
-            x[s[i]]=false;
+            
         }
         
-       
+     
         
         stack<int>letter;
         
@@ -19,14 +19,13 @@ public:
         {
             m[s[i]]--;
             
-            if(x[s[i]] == true) continue;
+            if(x[s[i]])continue;
                 
           while(!letter.empty() && s[letter.top()] >= s[i] && m[s[letter.top()]] > 0)
           {
-           
-              x[s[letter.top()]]=false;
+               x[s[letter.top()]]=false;
               letter.pop();
-              
+            
           }
                 x[s[i]]=true;
                 letter.push(i);
@@ -38,7 +37,7 @@ public:
         {
             
             ans+=s[letter.top()];
-           
+         
             letter.pop();
         }
         reverse(ans.begin() , ans.end());
