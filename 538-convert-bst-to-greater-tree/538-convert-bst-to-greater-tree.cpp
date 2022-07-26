@@ -22,7 +22,7 @@ public:
         //     root->val += Right->val;
         
         
-        TreeNode* get = convertBST(root->right , Right);
+        convertBST(root->right , Right);
     
         if(Right)
             root->val += Right->val;
