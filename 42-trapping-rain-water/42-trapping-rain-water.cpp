@@ -10,7 +10,7 @@ public:
         
         int ans = 0;
         
-        while(left <= right)
+        while(left < right)
         {
             if(height[left] < height[right])
             {
