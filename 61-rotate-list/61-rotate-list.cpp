@@ -32,10 +32,7 @@ public:
         if(k == 0)   return head;
         
         l->next = head;
-    //    l = l->next;
-        
-       // ListNode* curr = head;
-       
+  
         while(k--)
         {
           l = l->next;
