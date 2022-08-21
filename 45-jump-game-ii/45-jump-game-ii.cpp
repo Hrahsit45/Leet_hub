@@ -3,14 +3,13 @@ public:
     int jump(vector<int>& A) {
         
         
-        if(A.size()== 1)
-            return 0;
+        if(A.size()== 1)return 0;
         
          int best = A[0];
         
         int curr = A[0];
         
-        int jump = 1;
+        int jump = 0;
         
         for(int i  = 0 ; i < A.size()-1;  i++)
         {
@@ -21,7 +20,7 @@ public:
           
             best = max(best , A[i]);
             
-            if(curr == 0)
+            if(curr == 0 )
             {
                 jump++;
                 curr = best;
@@ -31,6 +30,6 @@ public:
             best--;
         }
         
-        return jump;
+        return jump+1;
     }
 };
