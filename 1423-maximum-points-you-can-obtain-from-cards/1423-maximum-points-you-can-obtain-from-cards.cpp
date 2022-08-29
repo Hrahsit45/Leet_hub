@@ -20,7 +20,8 @@ public:
         }
         
        int ans = max(pre[i-1] , post[i-1]);
-        int count = 1;
+       int count = 1;
+        
         for(int i = 0 ; i < k; i++)
         {
             if(count != k)
