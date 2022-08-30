@@ -11,7 +11,7 @@
  */
 class Solution {
 public:
-    TreeNode* deleteNode(TreeNode* root, int key) {
+    TreeNode* deleteNode(TreeNode* root, int &key) {
         
         if(!root)
             return NULL;
