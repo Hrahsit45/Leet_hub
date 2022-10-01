@@ -6,7 +6,7 @@ public:
         int r = nums.size()-1;
         //int mid = 0;
         
-        while(l < r)
+        while(l <= r)
         {
              if(nums[l] < nums[r])
                 return nums[l];
@@ -14,13 +14,18 @@ public:
             int mid = l + (r-l)/2;
             
            
-            if(nums[r] < nums[mid])
+            
+            if(nums[l] > nums[mid])
+            {
+                r = mid;
+            }
+            else if(nums[r] < nums[mid])
             {
                 l = mid+1;
             }
             else
             {
-                r = mid;
+                r = mid - 1;
             }
         }
         
