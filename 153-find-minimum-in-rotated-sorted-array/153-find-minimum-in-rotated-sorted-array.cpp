@@ -8,8 +8,8 @@ public:
         
         while(l <= r)
         {
-             if(nums[l] < nums[r])
-                return nums[l];
+             //if(nums[l] < nums[r])
+              //  return nums[l];
             
             int mid = l + (r-l)/2;
             
