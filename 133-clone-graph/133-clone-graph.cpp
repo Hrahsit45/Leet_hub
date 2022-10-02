@@ -49,13 +49,13 @@ public:
         {
           if(m.find(x) != m.end())
           {
-              neigh.push_back(m[x]);
+              clone->neighbors.push_back(m[x]);
           }
         else
-          neigh.push_back(dfs(x, m));
+          clone->neighbors.push_back(dfs(x, m));
         }
         
-        clone->neighbors = neigh;
+       // clone->neighbors = neigh;
         
         return clone;
     }
