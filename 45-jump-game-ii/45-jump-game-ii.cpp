@@ -1,35 +1,34 @@
 class Solution {
 public:
-    int jump(vector<int>& A) {
+    int jump(vector<int>& a) {
         
-        
-        if(A.size()== 1)return 0;
-        
-         int best = A[0];
-        
-        int curr = A[0];
-        
-        int jump = 0;
-        
-        for(int i  = 0 ; i < A.size()-1;  i++)
-        {
-
-            
-            if(A[i] == 0 && best == 0)
+        if(a.size() == 1)
             return 0;
-          
-            best = max(best , A[i]);
+     
+        int jumps = 0;
+        int steps_allowed = 0;
+        int best = 0;
+        int n = a.size();
+        
+        for(int i = 0 ; i < a.size() ; i++)
+        {
+            if(best < 0)
+                return -1;
             
-            if(curr == 0 )
+            if(steps_allowed == 0 && i!=n-1)
             {
-                jump++;
-                curr = best;
+                steps_allowed = max(a[i] , best);
+                jumps++;
             }
             
-            curr--;
+            best = max(best , a[i]);
+            steps_allowed--;
             best--;
+            
+          
         }
         
-        return jump+1;
+        return jumps;
+        
     }
 };
