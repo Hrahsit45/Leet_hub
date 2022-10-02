@@ -1,11 +1,9 @@
 class Solution {
 public:
     bool canJump(vector<int>& nums) {
-       
-       
+
         int n = nums.size() ;
-        if(n == 1)
-            return true;
+        if(n == 1) return true;
         
         int steps  = 0 ;
         
