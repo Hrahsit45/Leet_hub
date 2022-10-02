@@ -13,9 +13,7 @@ public:
         {
             steps = max(steps , nums[i]);
             steps--;
-            
-            cout<<steps<<"\n";
-            
+      
             if(steps < 0 && i != n-1)
                 return false;
         }
