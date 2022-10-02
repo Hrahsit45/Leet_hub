@@ -2,13 +2,9 @@ class Solution {
 public:
     int jump(vector<int>& a) {
         
-        if(a.size() == 1)
-            return 0;
+        if(a.size() == 1) return 0;
      
-        int jumps = 0;
-        int steps_allowed = 0;
-        int best = 0;
-        int n = a.size();
+        int jumps = 0 , steps_allowed = 0 , best = 0, n = a.size();
         
         for(int i = 0 ; i < a.size() ; i++)
         {
@@ -23,9 +19,7 @@ public:
             
             best = max(best , a[i]);
             steps_allowed--;
-            best--;
-            
-          
+            best--;   
         }
         
         return jumps;
