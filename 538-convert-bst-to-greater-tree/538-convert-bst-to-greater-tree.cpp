@@ -11,31 +11,22 @@
  */
 class Solution {
 public:
-    TreeNode *Right;
-    TreeNode* convertBST(TreeNode* root , TreeNode *r=NULL) {
+    int rsum ;
+    Solution()
+    {
+        rsum = 0;
+    }
+    TreeNode* convertBST(TreeNode* root) {
+      
+        if(!root)
+            return root;
         
-       if(!root)
-           return root;
-        
-        
-        // if(Right)
-        //     root->val += Right->val;
-        
-        
-        convertBST(root->right , Right);
-    
-        if(Right)
-            root->val += Right->val;
-        
-        Right = root;
-        
-        convertBST(root->left , Right);
-        
-        
-        // cout<<root->val<<"\n";
-        
-    
-        return root;
+        convertBST(root->right);
+            root->val += rsum;
+            rsum = root->val;
+        convertBST(root->left);
+                
+                return root;
          
     }
 };
