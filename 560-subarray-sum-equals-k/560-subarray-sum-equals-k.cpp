@@ -14,7 +14,7 @@ public:
         {
             sum += nums[i];
             
-            if(m.find(sum-k) != m.end())
+            if(m.count(sum-k))
             {
                 count+= m[sum - k];
             }
