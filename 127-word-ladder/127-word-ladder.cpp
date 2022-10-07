@@ -21,6 +21,7 @@ public:
                     for (int k = 0; k < 26; k++) {
                         word[j] = 'a' + k;
                         if (dict.find(word) != dict.end()) {
+                            dict.erase(word);
                             todo.push(word);
                         }
                      }
