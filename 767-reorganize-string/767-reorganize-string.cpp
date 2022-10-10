@@ -16,7 +16,7 @@ public:
             if(i.second > (s.size()+1)/2)
                 return "";
             
-            pq.push({i.second , i.first});
+            pq.emplace(i.second , i.first);
         }
         
         string ans = "";
@@ -33,7 +33,7 @@ public:
             curr.first--;
             
             if(prev.first > 0)
-                pq.push(prev);
+                pq.emplace(prev);
             
             prev = curr;
         }
